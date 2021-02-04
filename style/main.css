@@ -1,0 +1,158 @@
+:root {
+    --width-mobile: 375px;
+    --width-desktop: 950px;
+    --color-bg: #fafafa;
+    --color-font: #000000;
+    --font-title: 'PT Serif', serif;
+    --font-text: 'Poppins', sans-serif;
+    --font-footer: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--color-bg);
+    color: var(--color-font);
+}
+
+.wrapper {
+    width: var(--width-mobile);
+    margin: 0 auto;
+    padding: 71px 12px 69px;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.header_title {
+    margin-bottom: 38px;
+    font-family: var(--font-title);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+}
+
+.header_main_title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+.header_main_text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.content {
+    margin-bottom: 62px;
+}
+
+.content_photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.photos_item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    width: 160px;
+    list-style: none; 
+}
+
+.photos_item:nth-child(2n) {
+    position: relative;
+    top: 45px;
+}
+
+.photo_name {
+    order: 3;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.photo__role {
+    order: 2;
+    margin-left: 7px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: var(--font-title);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 13px;
+    text-transform: uppercase;
+}
+
+.photo__img {
+    order: 1;
+    margin-bottom: 10px;
+    width: 139px;
+    height: 209px;
+    object-fit: cover;
+}
+
+.footer {
+    text-align: center;
+    color: #a9a9a9;
+}
+
+@media only screen and (min-width:750px) {
+    .wrapper {
+        width: var(--width-desktop);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 90px;
+    }
+
+    .header__main {
+        width: 439px;
+    }
+    
+    .header__main__text {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .content {
+        margin-bottom: 90px;
+    }
+
+    .photos__item:nth-child(2n) {
+       top: 0;
+    }
+
+    .photos__item:nth-child(3n+2) {
+        position: relative;
+        top: 95px;
+    }
+
+    .photos_item {
+        margin-bottom: 120px;
+        width: 275px;
+    }
+
+    .photo__name {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .photo__role {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .photo__img {
+        width: 238px;
+        height: 341px;
+    }
+}
