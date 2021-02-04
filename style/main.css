@@ -1,158 +1,160 @@
-:root {
-    --width-mobile: 375px;
-    --width-desktop: 950px;
-    --color-bg: #fafafa;
-    --color-font: #000000;
-    --font-title: 'PT Serif', serif;
-    --font-text: 'Poppins', sans-serif;
-    --font-footer: 'Montserrat', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-text);
-    background-color: var(--color-bg);
-    color: var(--color-font);
+    font-family: "Poppins", sans-serif;
 }
 
-.wrapper {
-    width: var(--width-mobile);
+.container {
     margin: 0 auto;
-    padding: 71px 12px 69px;
+    width: 60vw;
 }
 
-.header {
-    margin-bottom: 60px;
-}
-
-.header_title {
-    margin-bottom: 38px;
-    font-family: var(--font-title);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -0.045em;
-}
-
-.header_main_title {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 27px;
-    text-transform: uppercase;
-}
-
-.header_main_text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-}
-
-.content {
-    margin-bottom: 62px;
-}
-
-.content_photos {
+.d-flex {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-between {
     justify-content: space-between;
 }
 
-.photos_item {
+.img-span-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 64px;
-    width: 160px;
-    list-style: none; 
 }
 
-.photos_item:nth-child(2n) {
-    position: relative;
-    top: 45px;
-}
-
-.photo_name {
-    order: 3;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 21px;
-}
-
-.photo__role {
-    order: 2;
-    margin-left: 7px;
+.img-span-wrapper  span {
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    font-family: var(--font-title);
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 13px;
     text-transform: uppercase;
 }
 
-.photo__img {
-    order: 1;
-    margin-bottom: 10px;
-    width: 139px;
-    height: 209px;
-    object-fit: cover;
+.img-wrapper img {
+    width: 100%;
 }
 
-.footer {
+.top {
+    margin-top: 2vw;
+}
+
+.top div {
+    width: 50%;
+}
+
+h1 {
+    font-size: 2.6vw;
+}
+
+h3 {
+    font-size: 1.5vw;
+}
+
+p {
+  font-size: 1vw;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.person {
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-wrapper {
+  width: 12vw;
+}
+
+span {
+    font-size: 1vw;
+}
+
+.person .name {
+    font-weight: bold;
+}
+.person {
+    margin-top: 2vw;
+}
+
+.p2.person, .p5.person {
+    margin-top: 5vw;
+}
+
+.credit {
+    margin-top: 5vw;
     text-align: center;
-    color: #a9a9a9;
+    color: gray;
 }
 
-@media only screen and (min-width:750px) {
-    .wrapper {
-        width: var(--width-desktop);
+@media only screen and (max-width: 1000px) {
+    .container {
+      width: 90vw;
     }
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 90px;
+    .header-wrapper {
+      margin-bottom: 5vw;
     }
 
-    .header__main {
-        width: 439px;
-    }
-    
-    .header__main__text {
-        font-size: 18px;
-        line-height: 27px;
+    h1 {
+      font-size: 6vw;
     }
 
-    .content {
-        margin-bottom: 90px;
+    .who-we-are h3 {
+      font-size: 4vw;
+      margin-bottom: 2vw;
     }
 
-    .photos__item:nth-child(2n) {
-       top: 0;
+    .who-we-are p {
+      font-size: 3vw;
     }
 
-    .photos__item:nth-child(3n+2) {
-        position: relative;
-        top: 95px;
+    .p2.person {
+      margin-top: 15vw;
     }
 
-    .photos_item {
-        margin-bottom: 120px;
-        width: 275px;
+    .top {
+      flex-direction: column;
     }
 
-    .photo__name {
-        font-size: 18px;
-        line-height: 27px;
+    .gallery {
+      margin-top: 10vw;
     }
 
-    .photo__role {
-        font-size: 12px;
-        line-height: 16px;
+    .person {
+      margin-top: 20vw 0!important;
+      width: 45%;
     }
 
-    .photo__img {
-        width: 238px;
-        height: 341px;
+    .person.p2, .person.p4, .person.p6 {
+      margin-top: 15vw;
+    }
+
+    .img-wrapper {
+      width: 45vw;
+    }
+
+    .img-span-wrapper span {
+      font-size: 2.5vw;
+    }
+
+    .name {
+      font-size: 2.5vw;
+    }
+
+    .top div {
+      width: 100%;
+    }
+
+    .credit {
+      margin-top: 10vw;
     }
 }
